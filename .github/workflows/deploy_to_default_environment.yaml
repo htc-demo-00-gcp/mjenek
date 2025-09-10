@@ -55,7 +55,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: Dockerfile
+          context: .
           platforms: linux/amd64
           push: true
           tags: europe-west3-docker.pkg.dev/htc-demo-00-gcp/humanitec/app:${{ github.sha }}
